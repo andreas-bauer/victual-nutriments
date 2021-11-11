@@ -1,4 +1,4 @@
-[![Android CI](https://github.com/andreas-bauer/victual-nutriments/actions/workflows/android.yml/badge.svg)](https://github.com/andreas-bauer/victual-nutriments/actions/workflows/android.yml)
+[![Android CI](https://github.com/andreas-bauer/victual-nutriments/actions/workflows/android.yml/badge.svg?branch=main)](https://github.com/andreas-bauer/victual-nutriments/actions/workflows/android.yml)
 
 # Victual Nutriments
 
