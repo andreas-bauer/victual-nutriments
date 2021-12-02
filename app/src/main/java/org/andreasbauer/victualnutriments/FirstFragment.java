@@ -51,7 +51,6 @@ public class FirstFragment extends Fragment {
                 Log.v("FirstFragment", "computed score = " + score);
 
                 Toast.makeText(getActivity(), "Your score is " + score, Toast.LENGTH_SHORT).show();
-
             }
         });
     }
