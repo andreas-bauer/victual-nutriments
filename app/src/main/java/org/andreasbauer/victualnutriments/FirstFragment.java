@@ -43,11 +43,12 @@ public class FirstFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 long score = Math.round(Math.random() * 1000);
+                // v = Verbose (lowest priority)
                 // d = Debug
-                // e = Error
                 // i = Info
-                // v = Verbose
                 // w = Warning
+                // e = Error
+                // a = Assert
                 Log.v("FirstFragment", "computed score = " + score);
 
                 Toast.makeText(getActivity(), "Your score is " + score, Toast.LENGTH_SHORT).show();
