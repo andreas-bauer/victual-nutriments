@@ -5,5 +5,5 @@ import java.net.URL;
 
 public interface HttpNetwork {
     String getResponseFromHttpUrl(URL url) throws IOException;
-    URL buildUrl(String githubSearchQuery);
+    URL buildUrl(String query);
 }

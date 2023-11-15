@@ -44,12 +44,12 @@ public class NetworkUtils implements HttpNetwork {
     /**
      * Builds the URL used to query GitHub.
      *
-     * @param githubSearchQuery The keyword that will be queried for.
+     * @param query The keyword that will be queried for.
      * @return The URL to use to query the GitHub server.
      */
-    public URL buildUrl(String githubSearchQuery) {
+    public URL buildUrl(String query) {
         Uri builtUri = Uri.parse(GITHUB_BASE_URL).buildUpon()
-                .appendQueryParameter(PARAM_QUERY, githubSearchQuery)
+                .appendQueryParameter(PARAM_QUERY, query)
                 .appendQueryParameter(PARAM_SORT, sortBy)
 
                 .build();

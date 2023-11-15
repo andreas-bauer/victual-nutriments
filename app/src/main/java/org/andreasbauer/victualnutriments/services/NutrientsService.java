@@ -7,6 +7,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 
 public class NutrientsService {
     HttpNetwork networkUtils;
@@ -23,6 +24,18 @@ public class NutrientsService {
             String content = networkUtils.getResponseFromHttpUrl(url);
             Nutrients retNut = parseToNutrient(content);
             return retNut;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            return  null;
+        }
+    }
+
+    public String[] getAvailableNames() {
+        URL url = networkUtils.buildUrl("all");
+        try {
+            String content = networkUtils.getResponseFromHttpUrl(url);
+            return content.split(",");
 
         } catch (IOException e) {
             e.printStackTrace();
