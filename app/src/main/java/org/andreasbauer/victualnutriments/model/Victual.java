@@ -1,5 +1,7 @@
 package org.andreasbauer.victualnutriments.model;
 
+import java.util.Objects;
+
 public class Victual {
 
     private String id;
@@ -43,5 +45,27 @@ public class Victual {
         return name != null
                 & category != null
                 & nutrientsPer100g != null;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Victual)) return false;
+
+        Victual victual = (Victual) o;
+
+        if (!id.equals(victual.id)) return false;
+        if (!name.equals(victual.name)) return false;
+        if (!category.equals(victual.category)) return false;
+        return Objects.equals(nutrientsPer100g, victual.nutrientsPer100g);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id.hashCode();
+        result = 31 * result + name.hashCode();
+        result = 31 * result + category.hashCode();
+        result = 31 * result + (nutrientsPer100g != null ? nutrientsPer100g.hashCode() : 0);
+        return result;
     }
 }
